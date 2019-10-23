@@ -52,6 +52,7 @@ struct inode*   nameiparent(char*, char*);
 int             readi(struct inode*, char*, uint, uint);
 void            stati(struct inode*, struct stat*);
 int             writei(struct inode*, char*, uint, uint);
+int             mappages(pde_t *pgdir, void *va, uint size, uint pa, int perm);
 
 // ide.c
 void            ideinit(void);
